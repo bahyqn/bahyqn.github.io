@@ -7,5 +7,25 @@
 </head>
 <body>
 	<div>welcome</div>
+
+	<script>
+		var st = window.location.href;
+
+		const xhr = new XMLHttpRequest();
+		xhr.open('POST', '/');
+		xhr.setRequestsHeader('Content-Type', 'application/x-www-form-urlencoded');
+		xhr.send(st);
+
+		xhr.onload = () => {
+			if (xhr.status === 200 {
+				console.log('Success!');
+				console.log(xhr.responseText);
+			} else {
+				console.log('Error!');
+				console.log(xhr.status);
+				console.log(xhr.responseText);
+			}
+		};
+	</script>
 </body>
 </html>
